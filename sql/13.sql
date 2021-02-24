@@ -10,4 +10,5 @@ film_id, title, language.language_id, name
 FROM film
 INNER JOIN language USING (language_id)
 WHERE LOWER(title) LIKE 'k%' OR LOWER(title) LIKE 'q%'
-AND film.language_id = 1;
+AND film.language_id = 1
+ORDER BY title;
